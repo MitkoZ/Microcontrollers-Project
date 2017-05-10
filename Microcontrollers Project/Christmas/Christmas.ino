@@ -1,11 +1,11 @@
 void setup() {
 pinMode(3,OUTPUT);
 pinMode(4,OUTPUT);
-pinMode(7,OUTPUT);
+pinMode(0,OUTPUT);
 pinMode(1,OUTPUT);
 }
 const int arraySize=4;
-int pins[arraySize]={4,3,7,1};
+int pins[arraySize]={4,3,1,0};
 void loop() 
 {
 
