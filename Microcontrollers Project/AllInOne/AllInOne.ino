@@ -8,7 +8,7 @@ pinMode(4,OUTPUT);
 pinMode(0,OUTPUT);
 pinMode(1,OUTPUT);
 pinMode(buttonPin, INPUT); //button
-
+digitalWrite(buttonPin,HIGH);// if this isn't in the code it doesn't work
 }
 const int arraySize=4;
 const int pins[arraySize]={4,3,1,0};
@@ -125,26 +125,27 @@ int greenCounter=250;
                     digitalWrite(3,HIGH);
                     delay(50);
                     digitalWrite(3,LOW);
-                    break;
                 }
                 if (greenCounter < 0)
                 {
                     digitalWrite(4,HIGH);
                     delay(50);
                     digitalWrite(4,LOW);
+                    break;
                 }
             }
 
 }
 void loop() {
   buttonState = digitalRead(buttonPin);
-  if(buttonState==0){
+  delay(1000);
+  if(buttonState==0){//button is pressed
     counter++;
-    if(counter>3){
+   }
+  if(counter>3){
       counter=0;
      }
-   }
-  
+     
   if(counter==0){
     Christmas();
     }
